@@ -1,4 +1,5 @@
-# News
+# News with Rust server side
+<img src="Screenshots/screenshot.gif">
 
 ## Installation
 1. Go to [snacky-news-rs](https://github.com/huytd/snacky-news-rs) clone and run 
@@ -11,6 +12,7 @@
 - [ ] Make UITableView Generics
 - [ ] Dark mode
 - [ ] Safari read mode
+- [ ] Fix date to vietnamese date
 
 ## Thanks for 
 

@@ -8,26 +8,54 @@
 
 import UIKit
 import Alamofire
+import JGProgressHUD
 
 class FinancialViewController: UITableViewController {
     
     fileprivate let cellId = "cellId"
+    fileprivate let hud = JGProgressHUD(style: .dark)
+    fileprivate let refresh = UIRefreshControl()
     
     var articles = [Article]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupTableView()
+        fetchArticle()
+        setupRefreshControl()
+        
+    }
+    
+    fileprivate func setupTableView() {
         let nib = UINib(nibName: "ArticlesCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: cellId)
+    }
+    
+    @objc fileprivate func setupRefreshControl() {
+        // Add Refresh Control to Table View
+        if #available(iOS 10.0, *) {
+            tableView.refreshControl = refresh
+        } else {
+            tableView.addSubview(refresh)
+        }
+        refresh.addTarget(self, action: #selector(refreshArticle), for: .valueChanged)
+    }
+    
+    @objc fileprivate func refreshArticle() {
         fetchArticle()
     }
     
     fileprivate func fetchArticle() {
         let urlString = APIService.financialUrl
         APIService.shared.fetchArticle(urlString: urlString) { (articles) in
-            self.articles = articles
-            self.tableView.reloadData()
+            DispatchQueue.main.async {
+                self.articles = articles
+                self.tableView.reloadData()
+                
+            }
+            self.hud.dismiss()
+            self.refresh.endRefreshing()
         }
     }
     
@@ -39,6 +67,7 @@ class FinancialViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! ArticlesCell
         let article = articles[indexPath.row]
         cell.article = article
+        
         return cell
     }
     
@@ -56,10 +85,15 @@ class FinancialViewController: UITableViewController {
         navigationController?.pushViewController(articleWebViewController, animated: true)
     }
     
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let v = UIView()
+        hud.textLabel.text = "Loading..."
+        hud.show(in: v)
+        return v
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return self.articles.count > 0 ? 0 : view.frame.height
+    }
+    
 }
-
-
-
-
-
-

@@ -97,9 +97,3 @@ class EverythingViewController: UITableViewController {
     }
     
 }
-
-
-
-
-
-
