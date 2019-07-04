@@ -12,11 +12,11 @@ import Alamofire
 class APIService {
     static let shared = APIService()
     
-    static let allUrl = "http://82736e73.ngrok.io/api/articles/all"
-    static let vietnameseUrl = "http://82736e73.ngrok.io/api/articles/vietnamese"
-    static let financialUrl = "http://82736e73.ngrok.io/api/articles/financial"
-    static let technicalUrl = "http://82736e73.ngrok.io/api/articles/technical"
-    static let otherUrl = "http://82736e73.ngrok.io/api/articles/other"
+    static let allUrl = "http://127.0.0.1:3366/api/articles/all"    
+    static let vietnameseUrl = "http://127.0.0.1:3366/api/articles/vietnamese"
+    static let financialUrl = "http://127.0.0.1:3366/api/articles/financial"
+    static let technicalUrl = "http://127.0.0.1:3366/api/articles/technical"
+    static let otherUrl = "http://127.0.0.1:3366/api/articles/other"
     
     func fetchArticle(urlString: String, completion: @escaping([Article]) -> Void) {
         
@@ -42,5 +42,5 @@ class APIService {
         
         
     }
-    
+
 }
