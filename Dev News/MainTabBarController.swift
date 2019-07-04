@@ -18,7 +18,7 @@ class MainTabBarController: UITabBarController {
         UINavigationBar.appearance().tintColor = .purple
         
         tabBar.tintColor = .purple
-        
+        tabBar.isTranslucent = false
         setupViewControllers()
         
     }

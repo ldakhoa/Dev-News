@@ -24,7 +24,7 @@ class TechnicalViewController: UITableViewController {
     }
     
     fileprivate func fetchArticle() {
-        let urlString = "http://127.0.0.1:3366/api/articles/technical"
+        let urlString = APIService.technicalUrl
         APIService.shared.fetchArticle(urlString: urlString) { (articles) in
             self.articles = articles
             self.tableView.reloadData()
@@ -44,6 +44,16 @@ class TechnicalViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 134
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let article = articles[indexPath.row]
+        let selectedArticleUrl = article.url
+        let articleWebViewController = ArticleWebViewController()
+        
+        articleWebViewController.selectedArticleURL = selectedArticleUrl
+        navigationController?.pushViewController(articleWebViewController, animated: true)
     }
     
 }

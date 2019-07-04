@@ -8,7 +8,7 @@ target 'Dev News' do
   # Pods for Dev News
 pod 'Alamofire'
 pod 'SDWebImage', '~> 5.0'
-
+pod 'JGProgressHUD'
 
   target 'Dev NewsTests' do
     inherit! :search_paths

@@ -8,29 +8,54 @@
 
 import UIKit
 import Alamofire
+import JGProgressHUD
 
 class EverythingViewController: UITableViewController {
     
     fileprivate let cellId = "cellId"
+    fileprivate let hud = JGProgressHUD(style: .dark)
+    fileprivate let refresh = UIRefreshControl()
     
     var articles = [Article]()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupTableView()
+        fetchArticle()
+        setupRefreshControl()
+
+    }
+    
+    fileprivate func setupTableView() {
         let nib = UINib(nibName: "ArticlesCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: cellId)
-        
-
+    }
+    
+    @objc fileprivate func setupRefreshControl() {
+        // Add Refresh Control to Table View
+        if #available(iOS 10.0, *) {
+            tableView.refreshControl = refresh
+        } else {
+            tableView.addSubview(refresh)
+        }
+        refresh.addTarget(self, action: #selector(refreshArticle), for: .valueChanged)
+    }
+    
+    @objc fileprivate func refreshArticle() {
         fetchArticle()
-        
     }
     
     fileprivate func fetchArticle() {
-        let urlString = "http://127.0.0.1:3366/api/articles/all"
+        let urlString = APIService.allUrl
         APIService.shared.fetchArticle(urlString: urlString) { (articles) in
-            self.articles = articles
-            self.tableView.reloadData()
+            DispatchQueue.main.async {
+                self.articles = articles
+                self.tableView.reloadData()
+
+            }
+            self.hud.dismiss()
+            self.refresh.endRefreshing()
         }
     }
     
@@ -58,6 +83,17 @@ class EverythingViewController: UITableViewController {
         
         articleWebViewController.selectedArticleURL = selectedArticleUrl
         navigationController?.pushViewController(articleWebViewController, animated: true)
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let v = UIView()
+        hud.textLabel.text = "Loading..."
+        hud.show(in: v)
+        return v
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return self.articles.count > 0 ? 0 : view.frame.height
     }
     
 }
