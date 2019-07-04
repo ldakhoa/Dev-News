@@ -10,6 +10,7 @@ import Foundation
 
 struct Article: Codable {
     var content: String
+    let image: String
     var published: String
     var text: String
     var title: String
