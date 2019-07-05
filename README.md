@@ -13,7 +13,7 @@
 - [ ] Dark mode
 - [ ] Safari read mode
 - [ ] Fix date to vietnamese date
-
+- [ ] Add source for each URLs
 ## Thanks for 
 
 [Rustlang - API](https://github.com/huytd/snacky-news-rs) from [@huytd](https://github.com/huytd).
