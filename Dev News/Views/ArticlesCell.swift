@@ -29,9 +29,7 @@ class ArticlesCell: UITableViewCell {
             print(article.published)
 
             pubDateLabel.text = self.getFormatedDate(date_string: article.published, dateFormat: "yyyy-MM-dd'T'HH:mm:ss.SSSSSS")
-            
 
-            
             if let url = URL(string: article.image) {
                 articleImageView.sd_setImage(with: url, completed: nil)
             }

@@ -9,7 +9,7 @@
 5. Build and run it
 
 ## Todo
-- [ ] Make UITableView Generics
+- [x] Make UITableView Generics
 - [ ] Dark mode
 - [ ] Safari read mode
 - [ ] Fix date to vietnamese date

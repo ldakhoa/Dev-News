@@ -23,9 +23,7 @@ class MainTabBarController: UITabBarController {
         
     }
     
-    
     func setupViewControllers() {
-
         viewControllers = [
             // TODO: Change Favorite at first
             generateNavigationController(with: EverythingViewController(), title: "Everything", image: #imageLiteral(resourceName: "everything")),
@@ -33,9 +31,7 @@ class MainTabBarController: UITabBarController {
             generateNavigationController(with: FinancialViewController(), title: "Financial", image: #imageLiteral(resourceName: "financial")),
             generateNavigationController(with: TechnicalViewController(), title: "Technical", image: #imageLiteral(resourceName: "technical")),
             generateNavigationController(with: OtherViewController(), title: "Other", image: #imageLiteral(resourceName: "other")),
-
         ]
-        
     }
     
     // MARK: - Helper functions
@@ -48,8 +44,7 @@ class MainTabBarController: UITabBarController {
         navController.tabBarItem.image = image
         
         rootViewController.navigationItem.title = title
-        
-        
+    
         return navController
     }
     
