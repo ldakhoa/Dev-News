@@ -11,7 +11,8 @@ import Alamofire
 
 class APIService {
     static let shared = APIService()
-    
+    // Run API in local
+    // This should use URLComponent if you have API server
     static let allUrl = "http://127.0.0.1:3366/api/articles/all"    
     static let vietnameseUrl = "http://127.0.0.1:3366/api/articles/vietnamese"
     static let financialUrl = "http://127.0.0.1:3366/api/articles/financial"

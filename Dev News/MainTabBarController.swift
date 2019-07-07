@@ -14,15 +14,16 @@ class MainTabBarController: UITabBarController {
         super.viewDidLoad()
         
         UINavigationBar.appearance().prefersLargeTitles = true
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.purple]
-        UINavigationBar.appearance().tintColor = .purple
+        UINavigationBar.appearance().tintColor = #colorLiteral(red: 0.9568627451, green: 0, blue: 0, alpha: 1)
         
-        tabBar.tintColor = .purple
+        tabBar.tintColor = #colorLiteral(red: 0.9568627451, green: 0, blue: 0, alpha: 1)
         tabBar.isTranslucent = false
         setupViewControllers()
         
+        
     }
     
+
     func setupViewControllers() {
         viewControllers = [
             // TODO: Change Favorite at first

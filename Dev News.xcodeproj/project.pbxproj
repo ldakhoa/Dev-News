@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		24D6652827FE3BA349E40C50 /* Pods_Dev_News.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3BFD2018F6BEEEA1F7B68E4 /* Pods_Dev_News.framework */; };
 		53AD418053E51504FE353DFF /* Pods_Dev_NewsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0F54FDF05C915E9A651814D /* Pods_Dev_NewsTests.framework */; };
+		6A0C239022D0C7DF0001949F /* Extensions+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0C238F22D0C7DF0001949F /* Extensions+Date.swift */; };
 		6A18F67F22CE1C800001737C /* ArticleWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A18F67E22CE1C800001737C /* ArticleWebViewController.swift */; };
 		6A50150222CDAF0300F06651 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A50150122CDAF0300F06651 /* MainTabBarController.swift */; };
 		6A50150422CDB0CB00F06651 /* EverythingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A50150322CDB0CB00F06651 /* EverythingViewController.swift */; };
@@ -19,6 +20,17 @@
 		6A50151522CDCDB600F06651 /* TechnicalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A50151422CDCDB600F06651 /* TechnicalViewController.swift */; };
 		6A50151722CDCDC100F06651 /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A50151622CDCDC100F06651 /* OtherViewController.swift */; };
 		6A6E2D7722CEF924004CE64E /* GenericTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6E2D7622CEF924004CE64E /* GenericTableViewController.swift */; };
+		6A6E2D7922CF01A6004CE64E /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6E2D7822CF01A6004CE64E /* SettingsTableViewController.swift */; };
+		6A6E2D7D22CF0731004CE64E /* Extensions+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6E2D7B22CF0730004CE64E /* Extensions+UIColor.swift */; };
+		6A6E2D7E22CF0731004CE64E /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6E2D7C22CF0730004CE64E /* Extensions+UIView.swift */; };
+		6A6E2D8022CF3F0A004CE64E /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6E2D7F22CF3F0A004CE64E /* SettingsCell.swift */; };
+		6A6E2D8322CF3FB3004CE64E /* Extensions+UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6E2D8222CF3FB3004CE64E /* Extensions+UserDefaults.swift */; };
+		6A6E2D8522CF4114004CE64E /* ThemeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6E2D8422CF4114004CE64E /* ThemeProtocol.swift */; };
+		6A6E2D8722CF440F004CE64E /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6E2D8622CF440F004CE64E /* AppTheme.swift */; };
+		6A6E2D8C22CF44E1004CE64E /* Weak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6E2D8822CF44E1004CE64E /* Weak.swift */; };
+		6A6E2D8D22CF44E1004CE64E /* AppThemeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6E2D8922CF44E1004CE64E /* AppThemeProvider.swift */; };
+		6A6E2D8E22CF44E1004CE64E /* SubscribableValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6E2D8A22CF44E1004CE64E /* SubscribableValue.swift */; };
+		6A6E2D8F22CF44E1004CE64E /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6E2D8B22CF44E1004CE64E /* AppFont.swift */; };
 		6A759B3222CCA12B00C3CBA5 /* Articles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A759B3122CCA12B00C3CBA5 /* Articles.swift */; };
 		6ACD197122CBABF6002B3908 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACD197022CBABF6002B3908 /* AppDelegate.swift */; };
 		6ACD197322CBABF6002B3908 /* VietnameseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACD197222CBABF6002B3908 /* VietnameseViewController.swift */; };
@@ -51,6 +63,7 @@
 		59C08C742BCFFA346A99A394 /* Pods-Dev News.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dev News.release.xcconfig"; path = "Target Support Files/Pods-Dev News/Pods-Dev News.release.xcconfig"; sourceTree = "<group>"; };
 		64FCDE55CF4625474D0D651C /* Pods_Dev_NewsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dev_NewsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66644DC034865C095663861A /* Pods-Dev NewsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dev NewsUITests.debug.xcconfig"; path = "Target Support Files/Pods-Dev NewsUITests/Pods-Dev NewsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6A0C238F22D0C7DF0001949F /* Extensions+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+Date.swift"; sourceTree = "<group>"; };
 		6A18F67E22CE1C800001737C /* ArticleWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleWebViewController.swift; sourceTree = "<group>"; };
 		6A50150122CDAF0300F06651 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		6A50150322CDB0CB00F06651 /* EverythingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EverythingViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +74,17 @@
 		6A50151422CDCDB600F06651 /* TechnicalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechnicalViewController.swift; sourceTree = "<group>"; };
 		6A50151622CDCDC100F06651 /* OtherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherViewController.swift; sourceTree = "<group>"; };
 		6A6E2D7622CEF924004CE64E /* GenericTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTableViewController.swift; sourceTree = "<group>"; };
+		6A6E2D7822CF01A6004CE64E /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		6A6E2D7B22CF0730004CE64E /* Extensions+UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Extensions+UIColor.swift"; path = "../../SwiftExtensions/Extensions+UIColor.swift"; sourceTree = "<group>"; };
+		6A6E2D7C22CF0730004CE64E /* Extensions+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Extensions+UIView.swift"; path = "../../SwiftExtensions/Extensions+UIView.swift"; sourceTree = "<group>"; };
+		6A6E2D7F22CF3F0A004CE64E /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
+		6A6E2D8222CF3FB3004CE64E /* Extensions+UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UserDefaults.swift"; sourceTree = "<group>"; };
+		6A6E2D8422CF4114004CE64E /* ThemeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeProtocol.swift; sourceTree = "<group>"; };
+		6A6E2D8622CF440F004CE64E /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		6A6E2D8822CF44E1004CE64E /* Weak.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Weak.swift; path = ../../../Hackers/Client/Themes/Weak.swift; sourceTree = "<group>"; };
+		6A6E2D8922CF44E1004CE64E /* AppThemeProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppThemeProvider.swift; path = ../../../Hackers/Client/Themes/AppThemeProvider.swift; sourceTree = "<group>"; };
+		6A6E2D8A22CF44E1004CE64E /* SubscribableValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubscribableValue.swift; path = ../../../Hackers/Client/Themes/SubscribableValue.swift; sourceTree = "<group>"; };
+		6A6E2D8B22CF44E1004CE64E /* AppFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppFont.swift; path = ../../../Hackers/Client/Themes/AppFont.swift; sourceTree = "<group>"; };
 		6A759B3122CCA12B00C3CBA5 /* Articles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Articles.swift; sourceTree = "<group>"; };
 		6ACD196D22CBABF6002B3908 /* Dev News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dev News.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6ACD197022CBABF6002B3908 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -122,12 +146,14 @@
 		6A50150722CDB51D00F06651 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6A6E2D7622CEF924004CE64E /* GenericTableViewController.swift */,
 				6A50150322CDB0CB00F06651 /* EverythingViewController.swift */,
 				6ACD197222CBABF6002B3908 /* VietnameseViewController.swift */,
 				6A50151222CDCDA900F06651 /* FinancialViewController.swift */,
 				6A50151422CDCDB600F06651 /* TechnicalViewController.swift */,
 				6A50151622CDCDC100F06651 /* OtherViewController.swift */,
 				6A18F67E22CE1C800001737C /* ArticleWebViewController.swift */,
+				6A6E2D7822CF01A6004CE64E /* SettingsTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -137,16 +163,33 @@
 			children = (
 				6A50150922CDB53C00F06651 /* ArticlesCell.swift */,
 				6A50151022CDB5E600F06651 /* ArticlesCell.xib */,
+				6A6E2D7F22CF3F0A004CE64E /* SettingsCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		6A50150B22CDB55400F06651 /* Extensions */ = {
+		6A6E2D7A22CF0707004CE64E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				6A6E2D7622CEF924004CE64E /* GenericTableViewController.swift */,
+				6A6E2D7B22CF0730004CE64E /* Extensions+UIColor.swift */,
+				6A6E2D7C22CF0730004CE64E /* Extensions+UIView.swift */,
+				6A6E2D8222CF3FB3004CE64E /* Extensions+UserDefaults.swift */,
+				6A0C238F22D0C7DF0001949F /* Extensions+Date.swift */,
 			);
-			path = Extensions;
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		6A6E2D8122CF3F4B004CE64E /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				6A6E2D8422CF4114004CE64E /* ThemeProtocol.swift */,
+				6A6E2D8622CF440F004CE64E /* AppTheme.swift */,
+				6A6E2D8B22CF44E1004CE64E /* AppFont.swift */,
+				6A6E2D8922CF44E1004CE64E /* AppThemeProvider.swift */,
+				6A6E2D8A22CF44E1004CE64E /* SubscribableValue.swift */,
+				6A6E2D8822CF44E1004CE64E /* Weak.swift */,
+			);
+			path = Themes;
 			sourceTree = "<group>";
 		};
 		6ACD196422CBABF6002B3908 = {
@@ -174,7 +217,8 @@
 		6ACD196F22CBABF6002B3908 /* Dev News */ = {
 			isa = PBXGroup;
 			children = (
-				6A50150B22CDB55400F06651 /* Extensions */,
+				6A6E2D8122CF3F4B004CE64E /* Themes */,
+				6A6E2D7A22CF0707004CE64E /* Extensions */,
 				6A50150822CDB52700F06651 /* Views */,
 				6A50150722CDB51D00F06651 /* Controllers */,
 				6ACD197022CBABF6002B3908 /* AppDelegate.swift */,
@@ -440,18 +484,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A6E2D8D22CF44E1004CE64E /* AppThemeProvider.swift in Sources */,
 				6ACD197322CBABF6002B3908 /* VietnameseViewController.swift in Sources */,
+				6A6E2D8F22CF44E1004CE64E /* AppFont.swift in Sources */,
+				6A6E2D8022CF3F0A004CE64E /* SettingsCell.swift in Sources */,
+				6A6E2D8722CF440F004CE64E /* AppTheme.swift in Sources */,
+				6A6E2D7D22CF0731004CE64E /* Extensions+UIColor.swift in Sources */,
+				6A6E2D7922CF01A6004CE64E /* SettingsTableViewController.swift in Sources */,
 				6A50151722CDCDC100F06651 /* OtherViewController.swift in Sources */,
 				6A6E2D7722CEF924004CE64E /* GenericTableViewController.swift in Sources */,
+				6A0C239022D0C7DF0001949F /* Extensions+Date.swift in Sources */,
 				6A759B3222CCA12B00C3CBA5 /* Articles.swift in Sources */,
 				6A18F67F22CE1C800001737C /* ArticleWebViewController.swift in Sources */,
 				6A50150A22CDB53C00F06651 /* ArticlesCell.swift in Sources */,
 				6A50151522CDCDB600F06651 /* TechnicalViewController.swift in Sources */,
 				6A50150222CDAF0300F06651 /* MainTabBarController.swift in Sources */,
 				6A50151322CDCDA900F06651 /* FinancialViewController.swift in Sources */,
+				6A6E2D8322CF3FB3004CE64E /* Extensions+UserDefaults.swift in Sources */,
 				6ACD197122CBABF6002B3908 /* AppDelegate.swift in Sources */,
+				6A6E2D8E22CF44E1004CE64E /* SubscribableValue.swift in Sources */,
 				6A50150622CDB31B00F06651 /* APIService.swift in Sources */,
+				6A6E2D8522CF4114004CE64E /* ThemeProtocol.swift in Sources */,
+				6A6E2D8C22CF44E1004CE64E /* Weak.swift in Sources */,
 				6A50150422CDB0CB00F06651 /* EverythingViewController.swift in Sources */,
+				6A6E2D7E22CF0731004CE64E /* Extensions+UIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

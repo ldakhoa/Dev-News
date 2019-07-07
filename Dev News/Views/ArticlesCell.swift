@@ -20,15 +20,15 @@ class ArticlesCell: UITableViewCell {
         }
     }
     
-    
     var article: Article! {
         didSet {
             titleLabel.text = article.title
             descriptionLabel.text = article.text
 
-            print(article.published)
-
-            pubDateLabel.text = self.getFormatedDate(date_string: article.published, dateFormat: "yyyy-MM-dd'T'HH:mm:ss.SSSSSS")
+            let dateString = getDate(date: article.published)
+            let timePeriod = dateString?.relativeTime
+            let pubDateString = String(timePeriod ?? "")
+            showOutputSource(article: article, pubDate: pubDateString)
 
             if let url = URL(string: article.image) {
                 articleImageView.sd_setImage(with: url, completed: nil)
@@ -36,23 +36,47 @@ class ArticlesCell: UITableViewCell {
             
         }
     }
-    
-    func getFormatedDate(date_string: String, dateFormat: String) -> String {
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
-        
-        dateFormatter.dateFormat = dateFormat
-        
-        let dateFromInputString = dateFormatter.date(from: date_string)
-        dateFormatter.dateFormat = "MMMM yyyy HH:MM"
-        
-        if dateFromInputString != nil {
-            return dateFormatter.string(from: dateFromInputString!)
-        } else {
-            debugPrint("could not convert date")
-            return "N/A"
+
+    fileprivate func showOutputSource(article: Article, pubDate: String) {
+        switch article.url {
+        case let str where str.contains("tuoitre"):
+            pubDateLabel.text = "tuoitre.vn in \(pubDate)"
+        case let str where str.contains("tinhte"):
+            pubDateLabel.text = "tinhte.vn in \(pubDate)"
+        case let str where str.contains("vnexpress"):
+            pubDateLabel.text = "vnexpress.net in \(pubDate)"
+            
+        case let str where str.contains("reddit"):
+            pubDateLabel.text = "reddit.com in \(pubDate)"
+        case let str where str.contains("feedburner"):
+            pubDateLabel.text = "feedburner.com in \(pubDate)"
+        case let str where str.contains("ycombinator"):
+            pubDateLabel.text = "news.ycombinator.com in \(pubDate)"
+        case let str where str.contains("arstechnica"):
+            pubDateLabel.text = "arstechnica.com/ in \(pubDate)"
+        case let str where str.contains("theverge"):
+            pubDateLabel.text = "theverge.com in \(pubDate)"
+        case let str where str.contains("engadget"):
+            pubDateLabel.text = "engadget.com in \(pubDate)"
+        case let str where str.contains("wired"):
+            pubDateLabel.text = "wired.com in \(pubDate)"
+        case let str where str.contains("thenextweb"):
+            pubDateLabel.text = "thenextweb.com in \(pubDate)"
+        case let str where str.contains("theonion"):
+            pubDateLabel.text = "theonion.com in \(pubDate)"
+        case let str where str.contains("reuters"):
+            pubDateLabel.text = "reuters.com in \(pubDate)"
+        default:
+            Void()
         }
+    }
+
+    fileprivate func getDate(date: String) -> Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSS"
+        dateFormatter.timeZone = TimeZone.current
+        dateFormatter.locale = Locale.current
+        return dateFormatter.date(from: date)
     }
     
 }

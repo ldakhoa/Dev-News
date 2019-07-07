@@ -24,11 +24,20 @@ class GenericTableViewController: UITableViewController {
         fetchArticle()
         setupRefreshControl()
         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "settings"), style: .plain, target: self, action: #selector(handleSettings))
     }
     
     fileprivate func setupTableView() {
         let nib = UINib(nibName: "ArticlesCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: cellId)
+    }
+    
+    // MARK: - Handle Function
+    
+    @objc func handleSettings() {
+        let settingsController = SettingsTableViewController()
+        let navController = UINavigationController(rootViewController: settingsController)
+        present(navController, animated: true, completion: nil)
     }
     
     @objc fileprivate func setupRefreshControl() {
